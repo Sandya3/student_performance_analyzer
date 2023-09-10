@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <title> Placement </title>
+    <link rel="stylesheet" href="css/placement.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  
+  <div class="sidebar">
+    <div class="logo-details">
+    
+      <span class="logo_name"> Sona Datazoids</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#"></a>
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" >
+            <i class='bx bx-box' ></i>
+            <span class="links_name">Academics</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="active">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name">Placements</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="/">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="placement">Placement</span>
+      </div>
+      
+      <div class="profile-details">
+        <img src="images/profile.png" alt="">
+        <span name="stdname" class="admin_name"><%= username %></span>
+        <i class='bx bx-chevron-down' ></i>
+      </div>
+    </nav>
+
+    <div class="home-content">
+      <div class="overview-boxes">
+        
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">SOFTSKILLS</div>
+            
+            <div class="indicator">
+              
+              
+            </div>
+          </div>
+          
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">APTITUDE</div>
+            
+            <div class="indicator">
+              
+              
+            </div>
+          </div>
+          
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">TECHNICAL</div>
+            
+            <div class="indicator">
+              
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="sales-boxes">
+        <div class="recent-sales box">
+          <div class="title">OverView</div>
+          
+          <canvas id="myChart" width="500" height="300"></canvas>
+
+        </div>
+        <div class="top-sales box">
+          <div class="title">Marks Scored</div>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">SOFTSKILLS</span>
+            </a>
+            <span class="price"><%= softskills %>/100</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">APTITUDE</span>
+            </a>
+            <span class="price"><%= aptitude %>/100</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">TECHNICAL</span>
+            </a>
+            <span class="price"><%= technical %>/100</span>
+          </li>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const data = {
+      'SOFTSKILLS': "<%= softskills %>",
+      'APTITUDE': "<%= aptitude %>",
+      'TECHNICAL': "<%= technical %>"
+      
+    };
+
+  const ctx = document.getElementById('myChart').getContext('2d');
+
+  const myChart = new Chart(ctx, {
+	  type: 'pie',
+	  data: {
+		  labels: Object.keys(data),
+		  datasets: [
+			  {
+			    label: 'Placement Chart',
+				  data: Object.values(data),
+			  },
+		  ],
+	  },
+      options: {
+          
+          backgroundColor: [
+              'rgb(60, 179, 113)',  // Bar 1
+              'rgb(106, 90, 205)',  // Bar 2
+              'rgba(210,89,127,0.89)',  // Bar 3
+          ],
+          borderWidth: 2,
+          borderColor: 'black'
+      }
+    });
+  </script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

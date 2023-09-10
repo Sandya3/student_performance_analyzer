@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <title>Academics</title>
+    <link rel="stylesheet" href="css/academics.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+    
+      <span class="logo_name"> Sona Datazoids</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="http://localhost:3000/dashboard" >
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="active">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">Academics</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://localhost:3000/placement">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name">Placements</span>
+          </a>
+        </li>
+        
+        <li class="log_out">
+          <a href="/">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="academics">Academics</span>
+      </div>
+      
+      <div class="profile-details">
+        <img src="images/profile.png" alt="">
+        <span name="stdname" class="admin_name"><%= username %></span>
+        <i class='bx bx-chevron-down' ></i>
+      </div>
+    </nav>
+
+    <div class="home-content">
+      <div class="overview-boxes">
+        
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">CIE-1</div>
+            <div class="indicator"> 
+            </div>
+          </div>
+          
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">CIE-2</div>
+            <div class="indicator">  
+            </div>
+          </div>
+          
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">CIE-3</div>
+            <div class="indicator"> 
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="sales-boxes">
+        <div class="recent-sales box">
+          <div class="title">OverView</div>
+          <b>CIE 1 MARKS SCORED</b>
+          <canvas id="myChart1" width="50" height="30"></canvas>
+          <br></br>
+          <b>CIE 2 MARKS SCORED</b>
+          <canvas id="myChart2" width="50" height="30"></canvas>
+          <br></br>
+          <b>CIE 3 MARKS SCORED</b>
+          <canvas id="myChart3" width="50" height="30"></canvas>
+
+        </div>
+        <div class="top-sales box">
+          <div class="title">Marks Scored in CIE's</div>
+          <p style="text-align:center"><b>CIE 1</b></p>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">CIE1_S1</span>
+            </a>
+            <span class="price"><%= cie1_s1 %>/50</span>
+
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">CIE1_S2</span>
+            </a>
+            <span class="price"><%= cie1_s2 %>/50</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">CIE1_S3</span>
+            </a>
+            <span class="price"><%= cie1_s3 %>/50</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">CIE1_S4</span>
+            </a>
+            <span class="price"><%= cie1_s4 %>/50</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">CIE1_S5</span>
+            </a>
+            <span class="price"><%= cie1_s5 %>/50</span>
+          </li>
+          <br></br>
+          <br></br>
+          <br></br>
+          <p style="text-align:center"><b>CIE 2</b></p>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">CIE2_S1</span>
+            </a>
+            <span class="price"><%= cie2_s1 %>/50</span>
+
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">CIE2_S2</span>
+            </a>
+            <span class="price"><%= cie2_s2 %>/50</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">CIE2_S3</span>
+            </a>
+            <span class="price"><%= cie2_s3 %>/50</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">CIE2_S4</span>
+            </a>
+            <span class="price"><%= cie2_s4 %>/50</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">CIE2_S5</span>
+            </a>
+            <span class="price"><%= cie2_s5 %>/50</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">CIE2_S6</span>
+            </a>
+            <span class="price"><%= cie2_s6 %>/50</span>
+          </li>
+          <br></br>
+          <br></br>
+          <p style="text-align:center"><b>CIE 3</b></p>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">CIE3_S1</span>
+            </a>
+            <span class="price"><%= cie3_s1 %>/50</span>
+
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">CIE3_S2</span>
+            </a>
+            <span class="price"><%= cie3_s2 %>/50</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">CIE3_S3</span>
+            </a>
+            <span class="price"><%= cie3_s3 %>/50</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">CIE3_S4</span>
+            </a>
+            <span class="price"><%= cie3_s4 %>/50</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">CIE3_S5</span>
+            </a>
+            <span class="price"><%= cie3_s5 %>/50</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/star.jpg" alt="">
+              <span class="product">CIE3_S6</span>
+            </a>
+            <span class="price"><%= cie3_s6 %>/50</span>
+          </li>
+        </div>
+      </div>
+    </div>
+        
+  </section>
+
+  <script>
+    var data1 = {
+      'CIE1_S1': "<%= cie1_s1 %>",
+      'CIE1_S2': "<%= cie1_s2 %>",
+      'CIE1_S3': "<%= cie1_s3 %>",
+      'CIE1_S4': "<%= cie1_s4 %>",
+      'CIE1_S5': "<%= cie1_s5 %>",
+    }
+    var data2 = {
+      'CIE2_S1': "<%= cie2_s1 %>",
+      'CIE2_S2': "<%= cie2_s2 %>",
+      'CIE2_S3': "<%= cie2_s3 %>",
+      'CIE2_S4': "<%= cie2_s4 %>",
+      'CIE2_S5': "<%= cie2_s5 %>",
+      'CIE2_S6': "<%= cie2_s6 %>",
+    }
+    var data3 = {
+      'CIE3_S1': "<%= cie3_s1 %>",
+      'CIE3_S2': "<%= cie3_s2 %>",
+      'CIE3_S3': "<%= cie3_s3 %>",
+      'CIE3_S4': "<%= cie3_s4 %>",
+      'CIE3_S5': "<%= cie3_s5 %>",
+      'CIE3_S6': "<%= cie3_s6 %>",
+      
+    };
+
+  const ctx1 = document.getElementById('myChart1').getContext('2d');
+  const ctx2 = document.getElementById('myChart2').getContext('2d');
+  const ctx3 = document.getElementById('myChart3').getContext('2d');
+  
+  const myChart1 = new Chart(ctx1, {
+	  type: 'bar',
+	  data: {
+		  labels: Object.keys(data1),
+		  datasets: [
+			  {
+			    label: ' CIE 1 Marks Scored ',
+				  data: Object.values(data1),
+			  },
+		  ],
+	  },
+      options: {
+          scales: {
+            y:{
+              suggestedMax: 50
+            }
+          },
+          backgroundColor: [
+              'rgba(177,71,127,0.80)',  // Bar 1
+              'rgba(61,197,127,0.78)',  // Bar 2
+              'rgba(13,45,127,0.71)',  // Bar 3
+              'rgba(197,216,127,0.83)', // Bar 4
+              'rgba(232,21,127,0.63)',
+          ],
+          borderWidth: 2,
+          borderColor: 'black'
+      }
+    });
+  
+    const myChart2 = new Chart(ctx2, {
+	  type: 'bar',
+	  data: {
+		  labels: Object.keys(data2),
+		  datasets: [
+			  {
+			    label: 'CIE 2 Marks Scored ',
+				  data: Object.values(data2),
+			  },
+		  ],
+	  },
+      options: {
+          scales: {
+            y:{
+              suggestedMax: 50
+            }
+          },
+          backgroundColor: [
+              'rgba(177,71,127,0.80)',  // Bar 1
+              'rgba(61,197,127,0.78)',  // Bar 2
+              'rgba(13,45,127,0.71)',  // Bar 3
+              'rgba(197,216,127,0.83)', // Bar 4
+              'rgba(232,21,127,0.63)',
+              'rgba(92,69,127,0.89)'
+          ],
+          borderWidth: 2,
+          borderColor: 'black'
+      }
+    });
+
+    const myChart3 = new Chart(ctx3, {
+	  type: 'bar',
+	  data: {
+		  labels: Object.keys(data3),
+		  datasets: [
+			  {
+			    label: 'CIE 3 Marks Scored ',
+				  data: Object.values(data3),
+			  },
+		  ],
+	  },
+      options: {
+          scales: {
+            y:{
+              suggestedMax: 50
+            }
+          },
+          backgroundColor: [
+              'rgba(177,71,127,0.80)',  // Bar 1
+              'rgba(61,197,127,0.78)',  // Bar 2
+              'rgba(13,45,127,0.71)',  // Bar 3
+              'rgba(197,216,127,0.83)', // Bar 4
+              'rgba(232,21,127,0.63)',
+              'rgba(92,69,127,0.89)'
+          ],
+          borderWidth: 2,
+          borderColor: 'black'
+      }
+    });
+
+
+  </script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
